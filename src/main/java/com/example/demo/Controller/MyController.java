@@ -13,6 +13,10 @@ import com.example.demo.Service.UserService;
 public class MyController {
 	@Autowired
 	UserService userService;
+	@GetMapping("/")
+	public String home() {
+	    return "redirect:/form";
+	}
 	@GetMapping("/form")
 public String showForm() {
 	return "register";
